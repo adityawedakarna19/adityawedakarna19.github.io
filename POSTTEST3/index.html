@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honda Dealer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+<header>
+<h1>Honda Dealer</h1>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+    </ul>
+    <div class="theme-toggle" onclick="toggleTheme()">Dark Mode</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+</header>
+
+<main id="home">
+<div id="options">
+<button onclick="toggleSection('prices')">Show Honda Car</button>
+<div id="prices" class="section hidden">
+    <h2>Car Prices & Summary</h2>
+    <br>
+    <div class="car-summary">
+      <h3>Honda Civic Type R</h3>
+      <img src="Honda-Civic-Type-R.png" alt="Honda Civic Type R" class="car-image">
+      <p><strong>Harga:</strong> Rp.1.000.000.000,00</p>
+      <p><strong>Keunggulan:</strong> Desain sporty dan aerodinamis, mesin bertenaga tinggi dan responsif, teknologi canggih untuk pengalaman berkendara yang lebih baik.</p>
+      <p><strong>Mesin:</strong> 2.0L Turbocharged 4-silinder, 306 HP</p>
+      <p><strong>Fitur Utama:</strong> Sistem penggerak roda depan (FWD) dengan sistem kontrol traksi yang canggih, layar sentuh 7 inci dengan sistem infotainment HondaLink, fitur keselamatan aktif seperti Honda Sensing.</p>
+      <br><br>
+      <h3>Honda Accord</h3>
+      <img src="Honda-Accord.png" alt="Honda Accord" class="car-image">
+      <p><strong>Harga:</strong> Rp.223.000.000,00</p>
+      <p><strong>Keunggulan:</strong> Mewah dan nyaman, performa mesin bertenaga, fitur keselamatan canggih.</p>
+      <p><strong>Mesin:</strong> 2.0L Turbo, 252 HP</p>
+      <p><strong>Fitur Utama:</strong> Interior kulit premium, Head-Up Display, sistem navigasi GPS.</p>
+    </div>
+</div>
+
+<button onclick="toggleSection('booking')">Form Booking Service</button>
+<div id="booking" class="section hidden">
+    <h2>Service Booking Form</h2>
+    <form id="bookingForm">
+        <label for="name">Nama Lengkap:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Nomor Telepon:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="carModel">Model Mobil:</label>
+        <select id="carModel" name="carModel" required>
+          <option value="civic">Honda Civic Type-R</option>
+          <option value="accord">Honda Accord</option>
+        </select>
+
+        <label for="serviceType">Jenis Servis:</label>
+        <select id="serviceType" name="serviceType" required>
+          <option value="routine">Servis Rutin</option>
+          <option value="repair">Perbaikan</option>
+        </select>
+
+        <label for="date">Tanggal Booking:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="comments">Keluhan kendaaran dan Catanan Tambahan:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Tambahkan catatan untuk teknisi..."></textarea>
+
+        <button type="submit">Kirim Booking</button>
+      </form>
+  </div>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Perkenalkan nama saya Aditya Wedakarna Dengan Nim 2309106100. Prodi saya adalah informatika di fakultas teknik Universitas Mulawarman</p>
+</section>
+</main>
+
+<footer>
+  <p>&copy; 2024 Honda Dealer Website</p>
+</footer>
+
+<div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <p>Welcome to the Honda Dealer Website!</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
